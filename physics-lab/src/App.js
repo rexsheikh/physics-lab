@@ -1,12 +1,15 @@
-import React from 'react';
-import PhysicsDemo from './components/PhysicsDemo';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import DemoPage from './pages/DemoPage';
+import GamesPage from './pages/GamesPage';
 
 function App() {
   return (
-    <div>
-      <h1>Welcome to Matter.js Physics Lab</h1>
-      <PhysicsDemo />
-    </div>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/demo" element={<DemoPage />} />
+      <Route path="/games" element={<GamesPage />} />
+    </Routes>
   );
 }
 
