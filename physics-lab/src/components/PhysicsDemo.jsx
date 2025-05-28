@@ -1,4 +1,4 @@
-// src/components/PhysicsDemo.jsx
+cd // src/components/PhysicsDemo.jsx
 import React, { useEffect, useRef } from 'react';
 import Matter from 'matter-js';
 
