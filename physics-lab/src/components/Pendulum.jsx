@@ -28,7 +28,12 @@ const Pendulum = () => {
     const roof = Matter.Bodies.rectangle(200, 100, 200, 20, { isStatic: true });
 
     // Displaced pendulum bob: x = 250 instead of 200
-    const ball = Matter.Bodies.circle(250, 300, 30, { density: 0.004 });
+    const ball = Matter.Bodies.circle(250, 300, 30, { 
+        density: 0.004, 
+        friction:0,
+        frictionAir:0,
+        restitution:1,
+     });
 
     // Constraint ("string") from roof to ball
     const string = Matter.Constraint.create({
